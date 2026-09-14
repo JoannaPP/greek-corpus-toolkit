@@ -43,7 +43,7 @@ class CorpusScraper:
         for p in paragraphs:
             p_text = p.get_text(" ", strip=True)
             # Skip noise and short promotional fragments
-            if len(p_text) < 40 or "portal ψυχαγωγίας" in p_text or "Γίνετε συνδρομητής" in p_text:
+            if len(p_text) < 40 or "portal ψυχαγωγίας" in p_text or "Γίνετε συνδρομητής" in p_text or "προτιμώμενες πηγές" in p_text or "δημοσιογραφικής έρευνας" in p_text:
                 continue
             cleaned_paragraphs.append(p_text)
 
